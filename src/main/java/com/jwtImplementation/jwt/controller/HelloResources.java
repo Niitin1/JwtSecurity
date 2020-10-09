@@ -1,6 +1,7 @@
 package com.jwtImplementation.jwt.controller;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -28,7 +29,7 @@ public class HelloResources {
 	@Autowired
 	JwtUtil jwtUtil;
 	
-	private final Logger log = Logger.getLogger(this.getClass());
+	private final Logger log = LoggerFactory.getLogger(HelloResources.class);
 	
 	@GetMapping(value = "/hello")
 	private String getGreeting() {
